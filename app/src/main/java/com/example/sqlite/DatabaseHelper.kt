@@ -15,7 +15,7 @@ data class Student(
 )
 class DatabaseHelper (context: Context) :
     SQLiteOpenHelper (context, "StudentDB", null, 1){
-    private val studentsLiveData = MutableLiveData<List<Student>>()
+    private val studentsLiveData = MutableLiveData<List<Student>>()//To have real time List of data
     override fun onCreate(db: SQLiteDatabase) {
 
         val query = """
